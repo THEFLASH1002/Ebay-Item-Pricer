@@ -24,7 +24,8 @@ def get_prices_by_link(link):
 
 def get_average(prices):
     return np.mean(prices)
-
+    
+# creates a new file to save the average of that days item
 def save_to_file(prices):
     fields = [datetime.today().strftime("%B-%D-%Y"),np.around(get_average(prices),2)]
     with open('prices.csv.','a',newline='') as f:
